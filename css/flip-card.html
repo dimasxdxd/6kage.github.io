@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            perspective: 500px;
+        }
+
+        .card {
+            width: 200px;
+            height: 300px;
+            transform-style: preserve-3d;
+            transition: all 1s ease-in-out;
+            border: 1px solid blue;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .depan {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background: #000;
+            color: #fff;
+        }
+
+        .belakang {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            background: green;
+            color: #fff;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="depan">depan</div>
+            <div class="belakang">belakang</div>
+        </div>
+    </div>
+</body>
+
+</html>
